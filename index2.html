@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EquitySeal — Certificado de independencia para comparadores de fondos</title>
+  <meta name="description" content="EquitySeal acredita que los comparadores de fondos de inversión operan sin sesgos ni incentivos ocultos, ofreciendo confianza y transparencia." />
+
+  <!-- Fuentes corporativas -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { darkMode: 'media' }; /* Modo oscuro automático */
+  </script>
+
+  <style>
+    .container-limit { max-width: 1200px; }
+    .font-heading{ font-family: "Montserrat", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans"; }
+    .font-body{ font-family: "Inter", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans"; }
+
+    /* Fondos con imágenes (URLs directas de Freepik) */
+    .bg-hero{
+      /* concepto-gestion-analisis-contabilidad-financiera-empresarial (GRATIS) */
+      background-image: url('https://img.freepik.com/foto-gratis/concepto-gestion-analisis-contabilidad-financiera-empresarial_53876-15817.jpg');
+      background-size: cover; background-position: center;
+    }
+    .bg-cta{
+      /* alto-angulo-articulos-oficina-alcancia-tabla-de-crecimiento (GRATIS) */
+      background-image: url('https://img.freepik.com/foto-gratis/alto-angulo-articulos-oficina-alcancia-tabla-crecimiento_23-2148780577.jpg');
+      background-size: cover; background-position: center;
+    }
+
+    /* Malla sutil */
+    .bg-grid {
+      background-image:
+        linear-gradient(to right, rgba(15,23,42,.06) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(15,23,42,.06) 1px, transparent 1px);
+      background-size: 22px 22px;
+    }
+    @media (prefers-color-scheme: dark) {
+      .bg-grid {
+        background-image:
+          linear-gradient(to right, rgba(255,255,255,.06) 1px, transparent 1px),
+          linear-gradient(to bottom, rgba(255,255,255,.06) 1px, transparent 1px);
+      }
+    }
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body class="antialiased font-body text-slate-800 dark:text-slate-100 bg-white dark:bg-slate-950">
+
+  <!-- HEADER -->
+  <header class="sticky top-0 z-50 bg-white/80 dark:bg-slate-900/70 backdrop-blur border-b border-slate-200 dark:border-slate-800">
+    <nav class="container-limit mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="#inicio" class="flex items-center gap-2 font-semibold">
+        <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-emerald-500 via-teal-500 to-cyan-500 text-white font-heading">ES</span>
+        <span class="text-lg font-heading">EquitySeal</span>
+      </a>
+      <button id="menuBtn" class="lg:hidden p-2 rounded-md border border-slate-300 dark:border-slate-700" aria-label="Abrir menú">☰</button>
+      <ul id="menu" class="hidden lg:flex items-center gap-6 text-sm">
+        <li><a href="#que-es" class="hover:text-emerald-700 dark:hover:text-emerald-400">Qué es</a></li>
+        <li><a href="#como-funciona" class="hover:text-emerald-700 dark:hover:text-emerald-400">Cómo funciona</a></li>
+        <li><a href="#beneficios" class="hover:text-emerald-700 dark:hover:text-emerald-400">Beneficios</a></li>
+        <li><a href="#personas" class="hover:text-emerald-700 dark:hover:text-emerald-400">Casos de uso</a></li>
+        <li><a href="#faqs" class="hover:text-emerald-700 dark:hover:text-emerald-400">FAQs</a></li>
+        <li><a href="#contacto" class="inline-flex items-center gap-2 px-3 py-2 rounded-xl bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 text-white hover:opacity-90">Contacto</a></li>
+      </ul>
+    </nav>
+    <!-- Menú móvil -->
+    <div id="mobile" class="hidden lg:hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900">
+      <ul class="px-4 py-3 space-y-2">
+        <li><a href="#que-es" class="block py-1">Qué es</a></li>
+        <li><a href="#como-funciona" class="block py-1">Cómo funciona</a></li>
+        <li><a href="#beneficios" class="block py-1">Beneficios</a></li>
+        <li><a href="#personas" class="block py-1">Casos de uso</a></li>
+        <li><a href="#faqs" class="block py-1">FAQs</a></li>
+        <li><a href="#contacto" class="block py-2 rounded-xl text-center bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 text-white">Contacto</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="inicio" class="bg-hero relative">
+    <div class="absolute inset-0 bg-gradient-to-br from-slate-900/70 via-slate-900/40 to-slate-900/70"></div>
+    <div class="relative container-limit mx-auto px-4 py-24 lg:py-28 text-white">
+      <div class="max-w-3xl">
+        <span class="inline-flex items-center gap-2 text-xs md:text-sm px-3 py-1 rounded-full bg-white/10 ring-1 ring-white/20 backdrop-blur">
+          <span class="text-emerald-300">Nuevo</span> Certificado de independencia
+        </span>
+        <h1 class="mt-5 text-4xl md:text-6xl font-heading font-extrabold leading-[1.1]">
+          Invertir con <span class="bg-clip-text text-transparent bg-gradient-to-r from-emerald-300 via-cyan-200 to-white">imparcialidad real</span>
+        </h1>
+        <p class="mt-4 text-lg md:text-xl text-white/90">
+          EquitySeal acredita que los comparadores de <strong>fondos de inversión</strong> operan sin sesgos, retrocesiones ni incentivos ocultos.
+        </p>
+        <div class="mt-8 flex flex-wrap items-center gap-3">
+          <a href="#contacto" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 hover:opacity-90 font-medium">
+            Solicitar información →
+          </a>
+          <a href="#que-es" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white/10 ring-1 ring-white/20 hover:bg-white/20">
+            Ver cómo funciona
+          </a>
+        </div>
+        <div class="mt-8 flex flex-wrap items-center gap-4 text-sm text-white/80">
+          <span class="inline-flex items-center gap-2">✅ Independencia verificada</span>
+          <span class="inline-flex items-center gap-2">🔍 Criterios públicos</span>
+          <span class="inline-flex items-center gap-2">🛡️ Alineado con MiFID II</span>
+        </div>
+      </div>
+    </div>
+    <svg class="block w-full text-white dark:text-slate-950" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true">
+      <path fill="currentColor" d="M0,0 C200,60 400,0 720,50 C1040,100 1240,40 1440,70 L1440,80 L0,80 Z"></path>
+    </svg>
+  </section>
+
+  <!-- QUÉ ES -->
+  <section id="que-es" class="bg-white dark:bg-slate-950">
+    <div class="container-limit mx-auto px-4 py-16">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-heading font-bold text-slate-900 dark:text-white">¿Qué es <span class="text-emerald-700 dark:text-emerald-400">EquitySeal</span>?</h2>
+          <p class="mt-4 text-slate-700 dark:text-slate-300 leading-relaxed">
+            Un <strong>certificado de independencia</strong> que garantiza que las comparativas y recomendaciones no están influenciadas por retrocesiones, comisiones ocultas ni intereses comerciales.
+          </p>
+          <ul class="mt-6 space-y-3 text-slate-700 dark:text-slate-300">
+            <li class="flex items-start gap-3"><span class="mt-1">✅</span> <span><strong>Diferenciación:</strong> neutralidad auditable.</span></li>
+            <li class="flex items-start gap-3"><span class="mt-1">✅</span> <span><strong>Confianza:</strong> elimina dudas sobre conflictos de interés.</span></li>
+            <li class="flex items-start gap-3"><span class="mt-1">✅</span> <span><strong>Empoderamiento:</strong> decisiones seguras para no expertos.</span></li>
+          </ul>
+          <div class="mt-8 flex gap-3">
+            <a href="#como-funciona" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-slate-900 dark:bg-slate-200 text-white dark:text-slate-900 hover:opacity-90">Descubrir el proceso</a>
+            <a href="#contacto" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl ring-1 ring-slate-300 dark:ring-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800">Hablar con nosotros</a>
+          </div>
+        </div>
+        <div class="relative rounded-2xl overflow-hidden shadow-xl ring-1 ring-slate-200 dark:ring-slate-800">
+          <div class="aspect-[4/3]">
+            <!-- Sustituida PREMIUM por GRATIS: análisis y gráficas -->
+            <img
+              src="https://img.freepik.com/free-photo/close-up-businesspeople-analyzing-graphs_1098-18705.jpg"
+              alt="Análisis de inversiones sin sesgos"
+              class="w-full h-full object-cover" />
+          </div>
+          <div class="absolute bottom-0 inset-x-0 p-3 text-xs text-white/90 bg-gradient-to-t from-black/70 to-transparent">
+            Imagen: Freepik (gratis)
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CÓMO FUNCIONA -->
+  <section id="como-funciona" class="bg-gradient-to-br from-emerald-50 via-cyan-50 to-white dark:from-slate-900 dark:via-slate-900 dark:to-slate-950 bg-grid">
+    <div class="container-limit mx-auto px-4 py-16">
+      <div class="max-w-3xl">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-slate-900 dark:text-white">Cómo funciona el certificado</h2>
+        <p class="mt-3 text-slate-700 dark:text-slate-300">Flujo claro y auditable para asegurar la neutralidad del comparador:</p>
+      </div>
+      <div class="mt-10 grid md:grid-cols-3 gap-6">
+        <!-- Tarjetas -->
+        <div class="p-6 bg-white dark:bg-slate-900 rounded-2xl shadow-sm ring-1 ring-slate-200 dark:ring-slate-800">
+          <div class="text-2xl">1️⃣</div>
+          <h3 class="mt-2 text-xl font-semibold text-slate-900 dark:text-white">Selección de fondos</h3>
+          <p class="mt-2 text-slate-700 dark:text-slate-300">Datos objetivos de fuentes reconocidas.</p>
+        </div>
+        <div class="p-6 bg-white dark:bg-slate-900 rounded-2xl shadow-sm ring-1 ring-slate-200 dark:ring-slate-800">
+          <div class="text-2xl">2️⃣</div>
+          <h3 class="mt-2 text-xl font-semibold text-slate-900 dark:text-white">Etiqueta de independencia</h3>
+          <p class="mt-2 text-slate-700 dark:text-slate-300">Ausencia de retrocesiones e incentivos ocultos.</p>
+        </div>
+        <div class="p-6 bg-white dark:bg-slate-900 rounded-2xl shadow-sm ring-1 ring-slate-200 dark:ring-slate-800">
+          <div class="text-2xl">3️⃣</div>
+          <h3 class="mt-2 text-xl font-semibold text-slate-900 dark:text-white">Explicación transparente</h3>
+          <p class="mt-2 text-slate-700 dark:text-slate-300">Metodología pública y auditable.</p>
+        </div>
+
+        <!-- Punto 4 con imagen gratuita equivalente -->
+        <div class="p-6 bg-white dark:bg-slate-900 rounded-2xl shadow-sm ring-1 ring-slate-200 dark:ring-slate-800 md:col-span-3">
+          <div class="grid md:grid-cols-2 gap-6 items-center">
+            <div>
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white">4️⃣ Auditoría & mejora continua</h3>
+              <p class="mt-2 text-slate-700 dark:text-slate-300">Revisiones programadas, lista pública de criterios y canal de feedback.</p>
+              <a href="#contacto" class="mt-4 inline-flex px-4 py-2 rounded-xl bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 text-white hover:opacity-90">Solicitar integración</a>
+            </div>
+            <div class="relative rounded-xl overflow-hidden ring-1 ring-slate-200 dark:ring-slate-800">
+              <div class="aspect-[16/9]">
+                <!-- Sustituida PREMIUM por GRATIS: equipo revisando informes -->
+                <img src="https://img.freepik.com/free-photo/group-people-working-out-business-plan-office_1303-15861.jpg"
+                     alt="Equipo revisando informes y progreso"
+                     class="w-full h-full object-cover">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA visual con fondo alcancía -->
+        <div class="p-6 bg-cta rounded-2xl shadow-lg ring-1 ring-slate-200 dark:ring-slate-800 relative overflow-hidden md:col-span-3">
+          <div class="absolute inset-0 bg-emerald-900/50 mix-blend-multiply"></div>
+          <div class="relative text-white">
+            <h3 class="text-xl font-semibold">¿Quieres certificar tu comparador?</h3>
+            <p class="mt-2 text-white/90">Te ayudamos a implantar EquitySeal en tu flujo y a comunicarlo a tus usuarios.</p>
+            <a href="#contacto" class="mt-4 inline-flex px-4 py-2 rounded-xl bg-white/10 ring-1 ring-white/30 hover:bg-white/20">Hablemos</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFICIOS -->
+  <section id="beneficios" class="bg-white dark:bg-slate-950">
+    <div class="container-limit mx-auto px-4 py-16">
+      <div class="max-w-3xl">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-slate-900 dark:text-white">Beneficios clave</h2>
+        <p class="mt-3 text-slate-700 dark:text-slate-300">Reduce asimetrías y evita sesgos en la decisión de inversión.</p>
+      </div>
+      <div class="mt-10 grid md:grid-cols-3 gap-6">
+        <div class="p-6 rounded-2xl ring-1 ring-slate-200 dark:ring-slate-800 bg-gradient-to-br from-emerald-50 to-cyan-50 dark:from-slate-900 dark:to-slate-900">
+          <h3 class="text-lg font-semibold text-slate-900 dark:text-white">Confianza radical</h3>
+          <p class="mt-2 text-slate-700 dark:text-slate-300">Señal clara de independencia; mejora conversión.</p>
+        </div>
+        <div class="p-6 rounded-2xl ring-1 ring-slate-200 dark:ring-slate-800 bg-gradient-to-br from-cyan-50 to-emerald-50 dark:from-slate-900 dark:to-slate-900">
+          <h3 class="text-lg font-semibold text-slate-900 dark:text-white">Transparencia verificable</h3>
+          <p class="mt-2 text-slate-700 dark:text-slate-300">Criterios públicos y auditorías periódicas.</p>
+        </div>
+        <div class="p-6 rounded-2xl ring-1 ring-slate-200 dark:ring-slate-800 bg-gradient-to-br from-indigo-50 to-cyan-50 dark:from-slate-900 dark:to-slate-900">
+          <h3 class="text-lg font-semibold text-slate-900 dark:text-white">Alineamiento regulatorio</h3>
+          <p class="mt-2 text-slate-700 dark:text-slate-300">En línea con MiFID II y mejores prácticas.</p>
+        </div>
+      </div>
+
+      <!-- Banner ilustrativo -->
+      <div class="mt-12 relative rounded-2xl overflow-hidden ring-1 ring-slate-200 dark:ring-slate-800">
+        <div class="aspect-[21/9]">
+          <!-- dos-trabajadores-ocupados-en-una-oficina-moderna (GRATIS) -->
+          <img src="https://img.freepik.com/foto-gratis/dos-trabajadores-ocupados-oficina-moderna_329181-15330.jpg" alt="Trabajo sin sesgos comerciales" class="w-full h-full object-cover">
+        </div>
+        <div class="absolute inset-x-0 bottom-0 p-4 text-xs text-white/90 bg-gradient-to-t from-black/50 to-transparent">Imagen: Freepik</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CASOS DE USO / GALERÍA -->
+  <section id="personas" class="bg-slate-50 dark:bg-slate-900">
+    <div class="container-limit mx-auto px-4 py-16">
+      <div class="max-w-3xl">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-slate-900 dark:text-white">Hecho para personas reales</h2>
+        <p class="mt-3 text-slate-700 dark:text-slate-300">Claridad para distintos perfiles de usuario.</p>
+      </div>
+
+      <!-- Tarjetas -->
+      <div class="mt-10 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="p-5 bg-white dark:bg-slate-900 rounded-2xl ring-1 ring-slate-200 dark:ring-slate-800"><h3 class="font-semibold text-slate-900 dark:text-white">María (42)</h3><p class="mt-2 text-sm text-slate-700 dark:text-slate-300">Confianza sin comisiones ocultas.</p></div>
+        <div class="p-5 bg-white dark:bg-slate-900 rounded-2xl ring-1 ring-slate-200 dark:ring-slate-800"><h3 class="font-semibold text-slate-900 dark:text-white">Rosa (55)</h3><p class="mt-2 text-sm text-slate-700 dark:text-slate-300">Seguridad y transparencia.</p></div>
+        <div class="p-5 bg-white dark:bg-slate-900 rounded-2xl ring-1 ring-slate-200 dark:ring-slate-800"><h3 class="font-semibold text-slate-900 dark:text-white">Javier (28)</h3><p class="mt-2 text-sm text-slate-700 dark:text-slate-300">Verificación independiente.</p></div>
+        <div class="p-5 bg-white dark:bg-slate-900 rounded-2xl ring-1 ring-slate-200 dark:ring-slate-800"><h3 class="font-semibold text-slate-900 dark:text-white">Ahmed (37)</h3><p class="mt-2 text-sm text-slate-700 dark:text-slate-300">Señales claras sin sesgos.</p></div>
+      </div>
+
+      <!-- Galería con tamaños uniformes -->
+      <div class="mt-12 grid md:grid-cols-3 gap-6">
+        <figure class="relative overflow-hidden rounded-2xl ring-1 ring-slate-200 dark:ring-slate-800">
+          <div class="aspect-[4/3]">
+            <!-- economía inversión comercio (GRATIS) -->
+            <img src="https://img.freepik.com/foto-gratis/economia-inversion-finanzas-concepto-comercio-empresarial_53876-125582.jpg" alt="Economía e inversión" class="w-full h-full object-cover">
+          </div>
+          <figcaption class="absolute bottom-0 inset-x-0 p-2 text-xs text-white/90 bg-gradient-to-t from-black/60 to-transparent">Imagen: Freepik</figcaption>
+        </figure>
+        <figure class="relative overflow-hidden rounded-2xl ring-1 ring-slate-200 dark:ring-slate-800">
+          <div class="aspect-[4/3]">
+            <!-- Sustituida PREMIUM por GRATIS: tablero y gráficos -->
+            <img src="https://img.freepik.com/free-photo/financial-graphs-technology-stock-market-graph_53876-124608.jpg" alt="Gráficos financieros sin sesgos" class="w-full h-full object-cover">
+          </div>
+          <figcaption class="absolute bottom-0 inset-x-0 p-2 text-xs text-white/90 bg-gradient-to-t from-black/60 to-transparent">Imagen: Freepik (gratis)</figcaption>
+        </figure>
+        <figure class="relative overflow-hidden rounded-2xl ring-1 ring-slate-200 dark:ring-slate-800">
+          <div class="aspect-[4/3]">
+            <!-- alcancía (GRATIS) -->
+            <img src="https://img.freepik.com/foto-gratis/alto-angulo-articulos-oficina-alcancia-tabla-crecimiento_23-2148780577.jpg" alt="Ahorro y crecimiento" class="w-full h-full object-cover">
+          </div>
+          <figcaption class="absolute bottom-0 inset-x-0 p-2 text-xs text-white/90 bg-gradient-to-t from-black/60 to-transparent">Imagen: Freepik</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQS -->
+  <section id="faqs" class="bg-white dark:bg-slate-950">
+    <div class="container-limit mx-auto px-4 py-16">
+      <div class="max-w-3xl">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-slate-900 dark:text-white">Preguntas frecuentes</h2>
+        <p class="mt-3 text-slate-700 dark:text-slate-300">Dudas habituales sobre el sello de independencia.</p>
+      </div>
+      <div class="mt-8 divide-y divide-slate-200 dark:divide-slate-800 rounded-2xl ring-1 ring-slate-200 dark:ring-slate-800">
+        <details class="group p-6">
+          <summary class="flex cursor-pointer list-none items-center justify-between">
+            <span class="font-semibold text-slate-900 dark:text-white">¿Qué certifica exactamente EquitySeal?</span>
+            <span class="transition-transform group-open:rotate-180 text-slate-600 dark:text-slate-300">⌄</span>
+          </summary>
+          <p class="mt-3 text-slate-700 dark:text-slate-300">Que las recomendaciones se realizan sin incentivos comerciales que generen sesgos, con metodología pública y auditable.</p>
+        </details>
+        <details class="group p-6">
+          <summary class="flex cursor-pointer list-none items-center justify-between">
+            <span class="font-semibold text-slate-900 dark:text-white">¿Cómo se mantiene la independencia?</span>
+            <span class="transition-transform group-open:rotate-180 text-slate-600 dark:text-slate-300">⌄</span>
+          </summary>
+          <p class="mt-3 text-slate-700 dark:text-slate-300">Auditorías periódicas, actualización de criterios y canal de feedback de usuarios.</p>
+        </details>
+        <details class="group p-6">
+          <summary class="flex cursor-pointer list-none items-center justify-between">
+            <span class="font-semibold text-slate-900 dark:text-white">¿Está alineado con la regulación?</span>
+            <span class="transition-transform group-open:rotate-180 text-slate-600 dark:text-slate-300">⌄</span>
+          </summary>
+          <p class="mt-3 text-slate-700 dark:text-slate-300">Sí, en línea con MiFID II y buenas prácticas del sector.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO (sin formulario) -->
+  <section id="contacto" class="relative overflow-hidden">
+    <div class="absolute inset-0 -z-10 opacity-[.06]" aria-hidden="true">
+      <!-- Fondo decorativo -->
+      <svg viewBox="0 0 800 600" class="w-[120%] h-auto">
+        <defs>
+          <linearGradient id="g" x1="0" x2="1">
+            <stop offset="0%" stop-color="#10b981"/>
+            <stop offset="50%" stop-color="#14b8a6"/>
+            <stop offset="100%" stop-color="#06b6d4"/>
+          </linearGradient>
+        </defs>
+        <circle cx="150" cy="150" r="120" fill="url(#g)"/>
+        <circle cx="650" cy="420" r="200" fill="url(#g)"/>
+      </svg>
+    </div>
+    <div class="container-limit mx-auto px-4 py-16">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-heading font-bold text-slate-900 dark:text-white">¿Listo para la transparencia?</h2>
+          <p class="mt-4 text-slate-700 dark:text-slate-300">Escríbenos y te contamos cómo integrar EquitySeal en tu comparador.</p>
+          <div class="mt-6 p-6 rounded-2xl ring-1 ring-slate-200 dark:ring-slate-800 bg-white dark:bg-slate-900">
+            <p class="text-sm text-slate-500 dark:text-slate-400">E-mail de contacto</p>
+            <a href="mailto:eugeniomit@gmail.com" class="mt-1 inline-flex items-center gap-2 text-lg font-semibold text-emerald-700 dark:text-emerald-400 hover:underline">
+              ✉️ eugeniomit@gmail.com
+            </a>
+            <div class="mt-6 flex flex-wrap gap-3">
+              <a href="mailto:eugeniomit@gmail.com?subject=Quiero%20EquitySeal" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 text-white hover:opacity-90">Solicitar demo</a>
+              <a href="mailto:eugeniomit@gmail.com?subject=Información%20EquitySeal" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl ring-1 ring-slate-300 dark:ring-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800">Pedir información</a>
+            </div>
+          </div>
+        </div>
+        <div class="relative rounded-2xl overflow-hidden ring-1 ring-slate-200 dark:ring-slate-800">
+          <div class="aspect-[4/3]">
+            <!-- Reutilizamos la del hero (GRATIS) -->
+            <img src="https://img.freepik.com/foto-gratis/concepto-gestion-analisis-contabilidad-financiera-empresarial_53876-15817.jpg" alt="Transparencia y datos financieros" class="w-full h-full object-cover">
+          </div>
+          <div class="absolute bottom-0 inset-x-0 p-3 text-xs text-white/90 bg-gradient-to-t from-black/70 to-transparent">Imagen: Freepik</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA final -->
+  <section class="relative">
+    <div class="absolute inset-0 -z-10">
+      <div class="bg-cta w-full h-full bg-fixed"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-slate-900/80 via-slate-900/60 to-slate-900/80"></div>
+    </div>
+    <div class="container-limit mx-auto px-4 py-16 text-white">
+      <div class="max-w-3xl">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold">Tu comparador, con un sello que inspira confianza</h2>
+        <p class="mt-3 text-white/90">Integra EquitySeal y comunica independencia real a tus usuarios desde el primer clic.</p>
+        <a href="#contacto" class="mt-6 inline-flex px-5 py-3 rounded-xl bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 hover:opacity-90">Contactar ahora</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-900 dark:bg-black text-slate-300">
+    <div class="container-limit mx-auto px-4 py-10">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div class="col-span-2">
+          <div class="flex items-center gap-2 font-semibold">
+            <span class="inline-flex h-8 w-8 items-center justify-center rounded-xl bg-gradient-to-br from-emerald-500 via-teal-500 to-cyan-500 text-white font-heading">ES</span>
+            <span class="font-heading text-white">EquitySeal</span>
+          </div>
+          <p class="mt-3 text-slate-400 text-sm">Certificado de independencia para comparadores de fondos de inversión. Transparencia verificable y confianza radical.</p>
+        </div>
+        <div>
+          <h4 class="font-heading font-semibold text-white">Secciones</h4>
+          <ul class="mt-2 space-y-1 text-sm text-slate-400">
+            <li><a href="#que-es" class="hover:text-white">Qué es</a></li>
+            <li><a href="#como-funciona" class="hover:text-white">Cómo funciona</a></li>
+            <li><a href="#beneficios" class="hover:text-white">Beneficios</a></li>
+            <li><a href="#personas" class="hover:text-white">Casos de uso</a></li>
+            <li><a href="#faqs" class="hover:text-white">FAQs</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-heading font-semibold text-white">Contacto</h4>
+          <p class="mt-2 text-sm text-slate-400">
+            ✉️ <a href="mailto:eugeniomit@gmail.com" class="hover:text-white">eugeniomit@gmail.com</a>
+          </p>
+        </div>
+      </div>
+      <div class="mt-8 pt-6 border-t border-slate-800 text-xs text-slate-500 flex flex-wrap gap-4 justify-between">
+        <span>© <span id="year"></span> EquitySeal. Todos los derechos reservados.</span>
+        <span>Imágenes: Freepik (recuerda cumplir su licencia y atribución).</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script -->
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mobile = document.getElementById('mobile');
+    if (menuBtn) menuBtn.addEventListener('click', () => mobile.classList.toggle('hidden'));
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.querySelectorAll('#mobile a').forEach(a => a.addEventListener('click', () => mobile.classList.add('hidden')));
+  </script>
+</body>
+</html>
